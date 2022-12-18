@@ -21,18 +21,18 @@ const Navbar: FC = () => {
       <nav className={styles.navbar}>
         <div />
         <ul className={styles.menu}>
-          <Link href={"/"}>
-            <li>Home</li>
-          </Link>
-          <Link href={"/foods"}>
-            <li>Foods</li>
-          </Link>
-          <Link href={"/cart"}>
-            <li>Cart</li>
-          </Link>
-          <Link href={"/contact"}>
-            <li>Contact</li>
-          </Link>
+          <li>
+            <Link href={"/"}>Home</Link>
+          </li>
+          <li>
+            <Link href={"/foods"}>Foods</Link>
+          </li>
+          <li>
+            <Link href={"/cart"}>Cart</Link>
+          </li>
+          <li>
+            <Link href={"/contact"}>Contact</Link>
+          </li>
         </ul>
         <div className={styles.buttons}>
           <button onClick={handleCart}>

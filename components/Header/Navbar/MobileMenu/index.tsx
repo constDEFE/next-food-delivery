@@ -18,18 +18,26 @@ const MobileMenu: FC<MobileMenuProps> = ({ state, handler }) => {
         className={`${styles.mobile} ${state ? styles.active : ""}`}
       >
         <ul className={styles.mobileMenu}>
-          <Link onClick={handler} href={"/"}>
-            <li>Home</li>
-          </Link>
-          <Link onClick={handler} href={"/foods"}>
-            <li>Foods</li>
-          </Link>
-          <Link onClick={handler} href={"/cart"}>
-            <li>Cart</li>
-          </Link>
-          <Link onClick={handler} href={"/contact"}>
-            <li>Contact</li>
-          </Link>
+          <li>
+            <Link onClick={handler} href={"/"}>
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link onClick={handler} href={"/foods"}>
+              Foods
+            </Link>
+          </li>
+          <li>
+            <Link onClick={handler} href={"/cart"}>
+              Cart
+            </Link>
+          </li>
+          <li>
+            <Link onClick={handler} href={"/contact"}>
+              Contact
+            </Link>
+          </li>
         </ul>
       </div>
     </div>

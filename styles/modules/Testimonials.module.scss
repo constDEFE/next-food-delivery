@@ -8,7 +8,7 @@
 
   h3 {
     color: $accentColor;
-    font-weight: 500;
+    font-weight: 400;
   }
 
   h2 {
@@ -19,18 +19,19 @@
     color: $accentColor;
   }
 
-  p {
-    color: $lightFontColor;
-    font-family: $mainFont;
-    line-height: 1.75;
-    padding: 0.5rem 0;
-  }
-
+  
   > div {
     width: 100%;
+    
+    > p {
+      color: $lightFontColor;
+      font-family: $mainFont;
+      line-height: 1.75;
+      padding: 0.5rem 0;
+    }
   }
 
-  img {
+  > img {
     width: 100%;
     height: auto;
   }

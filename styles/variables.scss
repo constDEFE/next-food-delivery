@@ -1,8 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Istok+Web&display=swap");
-
-$mainFont: "Istok Web", sans-serif;
-$titleFont: "RocknRoll One", sans-serif;
+$mainFont: Nunito, sans-serif;
+$titleFont: RocknRoll One, sans-serif;
 $fontColor: #212245;
 $bodyFontColor: #212529;
 $lightFontColor: #777;
@@ -10,6 +7,7 @@ $lightFontColor: #777;
 $bodyColor: #fcfcfc;
 $accentColor: #df2020;
 $accentWhite: #fde4e4;
+$accentWhiteHover: #ffc7c7;
 $lightGray: #e7e7e7;
 
 $headerBg: linear-gradient(

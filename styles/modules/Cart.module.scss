@@ -59,8 +59,12 @@
   height: 90vh;
 
   button {
-    background: transparent;
+    background: none;
     color: $fontColor;
+
+    &:hover {
+      background: none;
+    }
   }
 
   > button {
@@ -98,7 +102,7 @@
 
         p {
           font-size: 0.9rem;
-          font-weight: 600;
+          font-weight: 700;
 
           span {
             color: $accentColor;
@@ -125,11 +129,15 @@
   border-radius: 6px;
 
   span {
-    font-weight: 600;
+    font-weight: 700;
   }
 
   button {
     padding: 0.25rem 0.5rem;
+
+    &:hover {
+      background: $accentWhiteHover;
+    }
   }
 }
 
@@ -146,7 +154,7 @@
   background: $accentColor;
 
   span {
-    font-weight: 600;
+    font-weight: 700;
   }
 
   button {

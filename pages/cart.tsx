@@ -3,7 +3,7 @@ import { FC } from "react";
 import { FiTrash2 } from "react-icons/fi";
 import { useAppSelector } from "hooks/useAppSelector";
 import { useAppDispatch } from "hooks/useAppDispatch";
-import { removeItem } from "redux/slices/cartSlice";
+import { deleteItem } from "redux/slices/cartSlice";
 import Container from "components/UI/Container";
 import CustomHead from "components/UI/CustomHead";
 import SectionHeader from "components/UI/SectionHeader";
@@ -16,7 +16,7 @@ const CartPage: FC = () => {
   const totalPrice = useAppSelector((state) => state.cartReducer.totalPrice);
 
   const handleDeleteButton = (id: number): void => {
-    dispatch(removeItem(id));
+    dispatch(deleteItem(id));
   };
 
   return (

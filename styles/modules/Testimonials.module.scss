@@ -1,0 +1,50 @@
+@import "../variables.scss";
+
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 5rem;
+
+  h3 {
+    color: $accentColor;
+    font-weight: 500;
+  }
+
+  h2 {
+    padding: 1rem 0;
+  }
+
+  span {
+    color: $accentColor;
+  }
+
+  p {
+    color: $lightFontColor;
+    font-family: $mainFont;
+    line-height: 1.75;
+    padding: 0.5rem 0;
+  }
+
+  > div {
+    width: 100%;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  @media (min-width: $mediaMd) {
+    flex-direction: row;
+    gap: 0;
+
+    > div {
+      width: 50%;
+    }
+
+    > img {
+      width: 50%;
+    }
+  }
+}

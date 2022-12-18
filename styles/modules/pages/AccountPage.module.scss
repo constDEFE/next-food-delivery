@@ -1,0 +1,56 @@
+@import "../../variables.scss";
+
+.section {
+  min-height: 70vh;
+  padding: 2rem;
+}
+
+.container {
+  font-family: $mainFont;
+  display: flex;
+  justify-content: center;
+
+  h1 {
+    text-align: center;
+    font-family: $mainFont;
+    border-bottom: 1px solid $lightFontColor;
+    margin-bottom: 0.5rem;
+  }
+}
+
+.userCard {
+  > div {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    p {
+      font-weight: 600;
+    }
+
+    h4 {
+      font-family: $mainFont;
+      font-size: 1.1rem;
+    }
+
+    img {
+      width: 56px;
+      height: auto;
+      border-radius: 50%;
+    }
+  }
+
+  button {
+    @extend .transitionSm;
+
+    margin-top: 1rem;
+    border: 1px solid $accentColor;
+    padding: 0.5rem;
+    width: 100%;
+
+    &:hover {
+      background: white;
+      color: $accentColor;
+    }
+  }
+}

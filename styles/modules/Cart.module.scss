@@ -1,0 +1,164 @@
+@import "../variables.scss";
+
+.overlay {
+  transition-duration: 200ms;
+  transition-timing-function: ease-out;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  right: 0;
+  pointer-events: none;
+
+  &.active {
+    pointer-events: all;
+    background: #0004;
+  }
+}
+
+.cart {
+  background: $bodyColor;
+  position: absolute;
+  height: 100vh;
+  width: 75vw;
+  right: -100%;
+  top: 0;
+  transition-duration: 300ms;
+  transition-timing-function: ease-out;
+
+  &.active {
+    right: 0;
+  }
+
+  @media (min-width: $mediaSm) {
+    width: 50vw;
+  }
+  @media (min-width: $mediaMd) {
+    width: 40vw;
+  }
+  @media (min-width: $mediaLg) {
+    width: 30vw;
+  }
+  @media (min-width: $mediaXl) {
+    width: 25vw;
+  }
+  @media (min-width: $mediaXXl) {
+    width: 20vw;
+  }
+}
+
+.container {
+  position: relative;
+  height: 100%;
+}
+
+.content {
+  font-family: $mainFont;
+  padding: 1rem;
+  padding-right: 0;
+  height: 90vh;
+
+  button {
+    background: transparent;
+    color: $fontColor;
+  }
+
+  > button {
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  ul {
+    display: flex;
+    max-height: calc(100% - 2rem);
+    flex-direction: column;
+    gap: 2rem;
+    padding: 0.5rem 0;
+    overflow-y: auto;
+
+    li {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-right: 1rem;
+
+      > div {
+        display: flex;
+        gap: 1rem;
+
+        img {
+          width: 56px;
+          height: 56px;
+        }
+
+        h4 {
+          font-size: 0.9rem;
+        }
+
+        p {
+          font-size: 0.9rem;
+          font-weight: 600;
+
+          span {
+            color: $accentColor;
+            margin-left: 2rem;
+          }
+        }
+
+        > div {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 0.5rem;
+        }
+      }
+    }
+  }
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: $accentWhite;
+  border-radius: 6px;
+
+  span {
+    font-weight: 600;
+  }
+
+  button {
+    padding: 0.25rem 0.5rem;
+  }
+}
+
+.row {
+  position: absolute;
+  bottom: 0;
+  height: 10vh;
+  width: 100%;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  background: $accentColor;
+
+  span {
+    font-weight: 600;
+  }
+
+  button {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    background: white;
+    color: $accentColor;
+    border: 2px solid white;
+
+    &:hover {
+      background: $accentColor;
+      color: white;
+    }
+  }
+}

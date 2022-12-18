@@ -1,0 +1,86 @@
+@import "../variables.scss";
+
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu {
+  display: none;
+  align-items: center;
+  gap: 2rem;
+
+  a {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #212245;
+    transition-duration: 0.125s;
+    transition-timing-function: ease-out;
+    font-family: $mainFont;
+    gap: 2rem;
+
+    &:hover {
+      color: #df2020;
+    }
+
+    @media (min-width: $mediaLg) {
+      font-size: 1rem;
+    }
+  }
+
+  @media (min-width: $mediaSm) {
+    display: flex;
+  }
+
+  @media (min-width: $mediaMd) {
+    gap: 3rem;
+  }
+
+  @media (min-width: $mediaLg) {
+    gap: 4rem;
+  }
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  button {
+    background: none;
+    border: none;
+    color: black;
+  }
+
+  button:first-child {
+    position: relative;
+  }
+
+  button:last-child {
+    display: block;
+
+    @media (min-width: $mediaSm) {
+      display: none;
+    }
+  }
+
+  @media (min-width: $mediaLg) {
+    gap: 2rem;
+  }
+}
+
+.amount {
+  position: absolute;
+  background: $accentColor;
+  color: white;
+  padding: 0.05rem 0.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 400;
+  border-radius: 16px;
+  top: -6px;
+  right: -6px;
+}

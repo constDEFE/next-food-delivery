@@ -1,0 +1,64 @@
+@import "../variables.scss";
+
+.container {
+  div {
+    text-align: center;
+  }
+
+  span {
+    color: $accentColor;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: $accentColor;
+  }
+
+  h2 {
+    padding: 1rem 0;
+  }
+
+  h4 {
+    font-size: 1rem;
+    padding: 0.5rem;
+
+    @media (min-width: $mediaMd) {
+      font-size: 1.25rem;
+    }
+  }
+
+  p {
+    color: $lightFontColor;
+    font-family: $mainFont;
+  }
+
+  img {
+    width: 25%;
+    height: auto;
+  }
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem 0;
+  padding-top: 2rem;
+
+  p {
+    padding: 0.5rem;
+  }
+
+  div > p {
+    font-size: 0.9rem;
+
+    @media (min-width: $mediaMd) {
+      font-size: 1rem;
+    }
+  }
+
+  @media (min-width: $mediaSm) {
+    padding-top: 4rem;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

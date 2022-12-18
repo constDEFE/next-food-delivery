@@ -1,0 +1,27 @@
+@import "../variables.scss";
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 0.75rem;
+
+  @media (min-width: $mediaSm) {
+    max-width: 540px;
+  }
+
+  @media (min-width: $mediaMd) {
+    max-width: 720px;
+  }
+
+  @media (min-width: $mediaLg) {
+    max-width: 960px;
+  }
+
+  @media (min-width: $mediaXl) {
+    max-width: 1140px;
+  }
+
+  @media (min-width: $mediaXXl) {
+    max-width: 1320px;
+  }
+}

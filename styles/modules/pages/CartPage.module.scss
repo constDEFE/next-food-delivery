@@ -1,0 +1,107 @@
+@import "../../variables.scss";
+
+.section {
+  min-height: 50vh;
+}
+
+.container {
+  h2 {
+    text-align: center;
+    font-weight: 400;
+    font-size: 1.75rem;
+  }
+
+  th,
+  td,
+  table {
+    border: 1px solid $lightGray;
+    border-collapse: collapse;
+  }
+
+  table {
+    width: 100%;
+    font-family: $mainFont;
+
+    thead {
+      border-bottom: 2px solid black;
+    }
+
+    td,
+    th {
+      padding: 0.25rem;
+      max-width: 0;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      font-size: 0.8rem;
+
+      @media (min-width: $mediaSm) {
+        font-size: 1rem;
+      }
+    }
+
+    td {
+      text-align: center;
+    }
+
+    button {
+      background: none;
+      color: black;
+      margin: 0 auto;
+    }
+
+    img {
+      width: 48px;
+      height: auto;
+
+      @media (min-width: $mediaSm) {
+        width: 64px;
+      }
+    }
+  }
+
+  > div {
+    margin-top: 2rem;
+    font-family: $mainFont;
+
+    h4 {
+      font-size: 1rem;
+
+      span {
+        color: $accentColor;
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+
+.buttons {
+  flex-direction: column;
+  margin-top: 1rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+
+  button {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+
+  @media (min-width: $mediaSm) {
+    flex-direction: row;
+  }
+}
+
+.noItems {
+  display: flex;
+  justify-content: center;
+
+  hr {
+    margin: 0.5rem 0;
+  }
+
+  a {
+    font-weight: 600;
+    color: $accentColor;
+  }
+}

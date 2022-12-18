@@ -1,0 +1,58 @@
+@import "../variables.scss";
+
+.overlay {
+  transition-duration: 200ms;
+  transition-timing-function: ease-out;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  right: 0;
+  pointer-events: none;
+
+  &.active {
+    pointer-events: all;
+    background: #0004;
+  }
+}
+
+.mobile {
+  background: $bodyColor;
+  position: absolute;
+  height: 100vh;
+  right: -100%;
+  top: 0;
+  transition-duration: 300ms;
+  transition-timing-function: ease-out;
+
+  &.active {
+    right: 0;
+  }
+}
+
+.mobileMenu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+  width: 50vw;
+
+  & li {
+    padding: 1rem;
+  }
+
+  & a {
+    font-weight: 600;
+    font-size: 1.5rem;
+    width: 100%;
+    color: #212245;
+    transition-duration: 0.125s;
+    transition-timing-function: ease-out;
+    font-family: $mainFont;
+
+    &:hover {
+      color: $accentColor;
+    }
+  }
+}

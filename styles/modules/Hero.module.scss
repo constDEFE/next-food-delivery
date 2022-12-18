@@ -1,0 +1,109 @@
+@import "../variables.scss";
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  align-items: center;
+
+  h4 {
+    font-size: 1.25rem;
+    font-weight: 500;
+    letter-spacing: 0.025rem;
+    padding: 0.5rem 0;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    line-height: 55px;
+    padding: 0.5rem 0;
+
+    span {
+      color: $accentColor;
+    }
+  }
+
+  p {
+    font-family: $mainFont;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  @media (min-width: $mediaMd) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  > p {
+    font-size: 1rem;
+    color: #777;
+    padding: 1.5rem 0;
+  }
+}
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+
+  button {
+    padding: 0.5rem;
+    gap: 0.25rem;
+
+    @media (min-width: $mediaSm) {
+      padding: 0.5rem 1.25rem;
+    }
+  }
+
+  a:last-child button {
+    color: $accentColor;
+    background: transparent;
+    border: 1px solid $accentColor;
+
+    &:hover {
+      background: $accentColor;
+      color: white;
+    }
+  }
+
+  @media (min-width: $mediaSm) {
+    gap: 3rem;
+  }
+}
+
+.lastRow {
+  display: flex;
+  gap: 3rem;
+  padding: 3rem 0;
+
+  div {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+    color: $fontColor;
+    font-weight: 600;
+  }
+}
+
+.icon {
+  background: $accentColor;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+
+}

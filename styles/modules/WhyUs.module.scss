@@ -1,0 +1,52 @@
+@import "../variables.scss";
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  h2 {
+    padding: 1rem 0;
+  }
+
+  span {
+    color: $accentColor;
+  }
+
+  p {
+    color: $lightFontColor;
+    font-family: $mainFont;
+    padding: 0.75rem 0;
+    line-height: 1.75;
+  }
+
+  ul {
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  @media (min-width: $mediaMd) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.heading {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  svg {
+    color: $accentColor;
+  }
+
+  h4 {
+    font-family: $mainFont;
+  }
+}

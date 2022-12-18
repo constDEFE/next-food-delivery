@@ -1,0 +1,22 @@
+@import "../variables.scss";
+
+.section {
+  text-align: center;
+  h2 {
+    margin-bottom: 3rem;
+  }
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+
+  @media (min-width: $mediaSm) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: $mediaXl) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

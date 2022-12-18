@@ -1,0 +1,30 @@
+@import "../variables.scss";
+
+.slider {
+  padding: 2rem 0;
+
+  blockquote {
+    font-family: $mainFont;
+    color: $lightFontColor;
+    line-height: 1.75;
+  }
+}
+
+.row {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  img {
+    width: 48px;
+    height: 48px;
+    object-fit: cover;
+    border-radius: 6px;
+  }
+
+  p {
+    font-weight: 600;
+    color: $fontColor;
+  }
+}

@@ -1,0 +1,36 @@
+@import "../../variables.scss";
+
+.section {
+  height: 70vh;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  h1 {
+    font-family: $mainFont;
+    font-weight: 600;
+  }
+
+  span {
+    color: $accentColor;
+  }
+
+  hr {
+    border-color: $lightFontColor;
+  }
+
+  a {
+    font-family: $mainFont;
+    font-weight: 600;
+  }
+}

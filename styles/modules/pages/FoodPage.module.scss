@@ -1,0 +1,240 @@
+@import "../../variables.scss";
+
+.header {
+  padding: 5rem 0;
+  background: $headerBg;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50%;
+
+  h1 {
+    color: white;
+  }
+}
+
+.loading {
+  text-align: center;
+  font-size: 2rem;
+  padding: 10rem 0;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  align-items: center;
+
+  @media (min-width: $mediaMd) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.column {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+  justify-content: center;
+
+  hr {
+    display: none;
+    margin: 0.5rem;
+    width: 75%;
+    border-top: 1px solid lightgray;
+
+    @media (min-width: $mediaMd) {
+      display: block;
+    }
+  }
+
+  img {
+    width: 20%;
+    height: auto;
+    cursor: pointer;
+
+    @media (min-width: $mediaMd) {
+      width: 72px;
+    }
+  }
+
+  @media (min-width: $mediaMd) {
+    gap: 0.5rem;
+    flex-direction: column;
+  }
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-direction: column;
+
+  > img {
+    width: 65%;
+    height: auto;
+  }
+
+  @media (min-width: $mediaMd) {
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 2rem;
+  }
+}
+
+.right {
+  > div {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  h4 {
+    font-family: $mainFont;
+    font-size: 1.25rem;
+    color: $accentColor;
+
+    span {
+      margin-left: 1rem;
+      font-size: 2rem;
+    }
+  }
+
+  p {
+    font-family: $mainFont;
+    font-weight: 600;
+
+    span {
+      margin-left: 1rem;
+      padding: 0.25rem 1rem;
+      background: $accentWhite;
+      border-radius: 6px;
+    }
+  }
+
+  button {
+    margin-top: 3rem;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+.tabs {
+  padding-top: 1rem;
+  display: flex;
+  gap: 3rem;
+  border-bottom: 1px solid $accentWhite;
+
+  input {
+    display: none;
+
+    &:checked + label {
+      color: $accentColor;
+    }
+  }
+
+  label {
+    cursor: pointer;
+    font-weight: 500;
+    padding: 1rem 0;
+    border: none;
+    background: none;
+    font-size: 1rem;
+  }
+}
+
+.tabContent {
+  padding: 1rem 0;
+
+  p {
+    font-family: $mainFont;
+    color: $lightFontColor;
+    line-height: 1.75;
+  }
+}
+
+.reviews {
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  div {
+    h5 {
+      font-family: $mainFont;
+      font-size: 1rem;
+    }
+
+    p {
+      font-size: 0.9rem;
+      color: $fontColor;
+    }
+  }
+
+  h4 {
+    color: $accentColor;
+    font-family: $mainFont;
+    font-size: 1.25rem;
+  }
+
+  form {
+    margin: 1rem auto 0 auto;
+    width: 100%;
+    background: $accentWhite;
+    padding: 1rem;
+    border-radius: 8px;
+
+    textarea {
+      width: 100%;
+      resize: vertical;
+      max-height: 400px;
+      min-height: 40px;
+      height: 40px;
+      overflow-y: hidden;
+
+      @media (min-width: $mediaSm) {
+        max-height: 240px;
+      }
+
+      @media (min-width: $mediaMd) {
+        max-height: 180px;
+      }
+    }
+
+    button {
+      font-size: 0.9rem;
+      margin-top: 1rem;
+      padding: 0.4rem 0.75rem;
+    }
+
+    @media (min-width: $mediaMd) {
+      width: 75%;
+    }
+
+    @media (min-width: $mediaXl) {
+      width: 40%;
+    }
+  }
+}
+
+.related {
+  h2 {
+    font-size: 1.5rem;
+    padding: 1rem 0;
+  }
+
+  ul {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+
+    @media (min-width: $mediaSm) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (min-width: $mediaXl) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}

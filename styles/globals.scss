@@ -1,0 +1,101 @@
+@import-normalize;
+@import url("https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Istok+Web&display=swap");
+@import "./variables.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: $bodyColor;
+  font-family: $titleFont;
+  color: $bodyFontColor;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $titleFont;
+  color: $fontColor;
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+}
+
+img {
+  user-select: none;
+}
+
+h1,
+h2 {
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+section {
+  padding: 40px 0px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+hr {
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+  border-top: 1px solid;
+}
+
+input,
+textarea {
+  background: inherit;
+  border: none;
+  border-bottom: 1px solid gray;
+  padding: 0.5rem 1rem;
+  font-family: $mainFont;
+  font-size: 1rem;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+button {
+  @extend .transitionSm;
+
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $accentColor;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: $mainFont;
+  cursor: pointer;
+
+  &:hover {
+    background: $fontColor;
+  }
+}
+
+@media (min-width: $mediaMd) {
+  section {
+    padding: 60px 0px;
+  }
+
+  h1,
+  h2 {
+    font-size: 2.1rem;
+  }
+}

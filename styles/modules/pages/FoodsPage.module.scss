@@ -1,0 +1,120 @@
+@import "../../variables.scss";
+
+.form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: $mainFont;
+  gap: 1rem;
+
+  input {
+    width: 50%;
+    padding: 0.75rem 1rem;
+    border: 1px solid $accentWhite;
+    border-radius: 6px;
+    font-size: 1rem;
+
+    &:focus {
+      outline: 1px solid $accentWhite;
+    }
+  }
+
+  select {
+    width: 50%;
+    padding: 0.75rem 1rem;
+    border: 1px solid $accentWhite;
+    border-radius: 6px;
+    font-size: 1rem;
+
+    &:focus {
+      outline: 1px solid $accentWhite;
+    }
+
+    option {
+      padding: 0.5rem;
+    }
+
+    @media (min-width: $mediaMd) {
+      width: 33%;
+    }
+
+    @media (min-width: $mediaLg) {
+      width: 25%;
+    }
+  }
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem 1rem;
+  margin-top: 2rem;
+
+  @media (min-width: $mediaSm) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (min-width: $mediaMd) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @media (min-width: $mediaLg) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.paginationContainer {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  ul {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+  }
+
+  button {
+    @extend .transitionSm;
+
+    border: none;
+    background: $fontColor;
+    border-radius: 6px;
+    font-family: $mainFont;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    width: 2.25rem;
+    height: 2.25rem;
+    color: white;
+
+    &:hover {
+      background: $accentColor;
+    }
+
+    &.currentPage {
+      background: $accentColor;
+    }
+  }
+
+  > button {
+    background: $fontColor;
+    width: 2.5rem;
+
+    &:hover {
+      background: $accentColor;
+    }
+  }
+}

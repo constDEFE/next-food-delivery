@@ -1,0 +1,37 @@
+$mainFont: "Istok Web", sans-serif;
+$titleFont: "RocknRoll One", sans-serif;
+$fontColor: #212245;
+$bodyFontColor: #212529;
+$lightFontColor: #777;
+
+$bodyColor: #fcfcfc;
+$accentColor: #df2020;
+$accentWhite: #fde4e4;
+$lightGray: #e7e7e7;
+
+$headerBg: linear-gradient(
+    rgba(33, 34, 69, 0.6980392156862745),
+    rgba(33, 34, 69, 0.6980392156862745)
+  ),
+  url("https://i.ibb.co/L5K7j92/banner-02.webp");
+
+$mediaSm: 576px;
+$mediaMd: 768px;
+$mediaLg: 992px;
+$mediaXl: 1200px;
+$mediaXXl: 1400px;
+
+.transitionSm {
+  transition-duration: 125ms;
+  transition-timing-function: ease-out;
+}
+
+.transitionMd {
+  transition-duration: 175ms;
+  transition-timing-function: ease-out;
+}
+
+.transitionLg {
+  transition-duration: 225ms;
+  transition-timing-function: ease-out;
+}

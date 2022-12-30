@@ -9,7 +9,7 @@ Project includes:
 - Account/Login page made with Google Auth.
 - Unique page for each item.
 - Checkout page.
-- Ability to add reviews to the items.
+- Ability to add reviews on items.
 
 ## Available Scripts
 In the project directory, you can run:
